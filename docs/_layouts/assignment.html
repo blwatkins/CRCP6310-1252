@@ -4,9 +4,29 @@ layout: default
 
 <h1>{{ page.name }}</h1>
 
+<hr/>
+
+<h1 id="table-of-contents">Table of Contents</h1>
+
+<ul>
 {% for submission in site.submissions %}
     {%- if submission.assignment_id == page.assignment_id -%}
-    <h2>{{ submission.student_name }}</h2>
+    <li><a href="#{{ submission.student_id }}">{{ submission.student_name }}</a></li>
+    {%- endif -%}
+{% endfor %}
+
+    <li><a href="fin">Fin.</a></li>
+</ul>
+
+{% for submission in site.submissions %}
+    {%- if submission.assignment_id == page.assignment_id -%}
+    <h2 id="{{ submission.student_id }}">{{ submission.student_name }}</h2>
     <img src="{{ submission.id | relative_url }}.png" width="90%"/>
     {%- endif -%}
 {% endfor %}
+
+<hr/>
+
+<h3 id="fin">Fin.</h3>
+
+<a href="table-of-contents">Table of Contents</a>
