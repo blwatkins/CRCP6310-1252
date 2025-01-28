@@ -4,8 +4,11 @@ layout: default
 
 <h1>{{ page.name }}</h1>
 
+<h2>{{ page.id }}</h2>
+
 {% for submission in site.submissions %}
+    <p>{{ submission.assignment_id }}</p>
     {%- if submission.assignment_id == page.id -%}
-        <h2>{{ submission.student_name }}</h2>
+    <h2>{{ submission.student_name }}</h2>
     {%- endif -%}
 {% endfor %}
