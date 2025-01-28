@@ -1,4 +1,5 @@
 ---
+layout: "assignment"
 name: "Painting Recreation"
 module: "Module 2"
 id: "module-02"
