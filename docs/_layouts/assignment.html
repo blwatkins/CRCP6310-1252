@@ -7,6 +7,6 @@ layout: default
 {% for submission in site.submissions %}
     {%- if submission.assignment_id == page.assignment_id -%}
     <h2>{{ submission.student_name }}</h2>
-    <img src="{{ submission.id | relative_url }}/output.png" width="90%"/>
+    <img src="{{ submission.id | relative_url }}.png" width="90%"/>
     {%- endif -%}
 {% endfor %}
