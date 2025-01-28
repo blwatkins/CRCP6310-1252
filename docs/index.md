@@ -2,9 +2,11 @@
 
 ## Assignments
 
+<ul>
 {% for assignment in site.assignments %}
-<h3><a href="{{ assignment.url | relative_url }}">{{ assignment.module }} - {{ assignment.name }}</a></h3>
+<li><h3><a href="{{ assignment.url | relative_url }}">{{ assignment.module }} - {{ assignment.name }}</a></h3></li>
 {% endfor %}
+</ul>
 
 ----
 
