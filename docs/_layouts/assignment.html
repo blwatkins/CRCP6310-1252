@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h1>{{ page.name }}</h1>
+
+{% for submission in site.submissions %}
+    {%- if submission.assignment_id == page.id -%}
+        <h2>{{ submission.student_name }}</h2>
+    {%- endif -%}
+{% endfor %}
