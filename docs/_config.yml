@@ -6,3 +6,14 @@ plugins:
 title: 'SMU CRCP 6310 - Spring 2025'
 description: Student project submissions from CRCP 6310 - Introduction to Creative Coding; Spring 2025 term.
 show_downloads: false
+
+# Collections
+collections_dir: "./collections"
+
+collections:
+  assignments:
+    output: true
+  students:
+    output: true
+  submissions:
+    output: true
