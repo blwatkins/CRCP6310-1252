@@ -4,7 +4,7 @@
 
 {% for assignment in site.assignments %}
 <a href="{{ assignment.url | relative_url }}">
-<h3>{{ assignment.module }} - {{ assignment.name }}</h3>
+  <h3>{{ assignment.module }} - {{ assignment.name }}</h3>
 </a>
 {% endfor %}
 
