@@ -1,8 +1,16 @@
 # Welcome!
 
+## Assignments
+
+{% for assignment in site.assignments %}
+    <a href="{{ assignment.url }}">
+        <h3>{{ assignment.module }} - {{ assignment.name }}</h3>
+    </a>
+{% endfor %}
+
 ----
 
-### attributions
+### Attributions
 
 The favicon.ico of this template was designed by
 [Freepik from Flaticon](https://www.flaticon.com/free-icons/art).
