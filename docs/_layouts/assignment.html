@@ -29,7 +29,7 @@ layout: default
         {%- if submission.file_extension == "png" -%}
         <img src="{{ submission.id | relative_url }}.{{ submission.file_extension }}" width="90%"/>
         {%- elsif submission.file_extension == "mov" -%}
-        <video src="{{ submission.id | relative_url }}.{{ submission.file_extension }}" width="90%" controls autoplay loop>
+        <video src="{{ submission.id | relative_url }}.{{ submission.file_extension }}" width="90%" style="max-height: 90vh;" controls autoplay loop>
             Your browser does not support the video HTML tag.
         </video>
         {%- endif -%}
