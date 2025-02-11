@@ -26,7 +26,7 @@ layout: default
     {%- if submission.assignment_id == page.assignment_id -%}
     <h2 id="{{ submission.student_id }}">{{ submission.student_name }}</h2>
     <div style="text-align: center; width: 100%;">
-    <img src="{{ submission.id | relative_url }}.png" width="90%"/>
+    <img src="{{ submission.id | relative_url }}.{{ submission.file_extension }}" width="90%"/>
     </div>
     {%- endif -%}
 {% endfor %}
