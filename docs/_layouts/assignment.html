@@ -26,7 +26,13 @@ layout: default
     {%- if submission.assignment_id == page.assignment_id -%}
     <h2 id="{{ submission.student_id }}">{{ submission.student_name }}</h2>
     <div style="text-align: center; width: 100%;">
-    <img src="{{ submission.id | relative_url }}.{{ submission.file_extension }}" width="90%"/>
+        {%- if submission.file_extension == "png" -%}
+        <img src="{{ submission.id | relative_url }}.{{ submission.file_extension }}" width="90%"/>
+        {%- elsif submission.file_extension == "mov" -%}
+        <video src="{{ submission.id | relative_url }}.{{ submission.file_extension }}" width="90%" controls autoplay loop>
+            Your browser does not support the video HTML tag.
+        </video>
+        {%- endif -%}
     </div>
     {%- endif -%}
 {% endfor %}
